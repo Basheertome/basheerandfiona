@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-medium.woff2') format('woff2'),
+		url('pitchsans-medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-medium-italic.woff2') format('woff2'),
+		url('pitchsans-medium-italic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-light.woff2') format('woff2'),
+		url('pitchsans-light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-semibold.woff2') format('woff2'),
+		url('pitchsans-semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-light-italic.woff2') format('woff2'),
+		url('pitchsans-light-italic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-semibold-italic.woff2') format('woff2'),
+		url('pitchsans-semibold-italic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-regular-italic.woff2') format('woff2'),
+		url('pitchsans-regular-italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-bold.woff2') format('woff2'),
+		url('pitchsans-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-bold-italic.woff2') format('woff2'),
+		url('pitchsans-bold-italic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic; }
+
+@font-face {
+	font-family: 'Pitch Sans';
+	src: url('pitchsans-regular.woff2') format('woff2'),
+		url('pitchsans-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal; }

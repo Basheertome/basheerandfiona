@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'Recoleta';
+	src: url('recoleta-thin.woff2') format('woff2'),
+		url('recoleta-thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Recoleta';
+	src: url('recoleta-bold.woff2') format('woff2'),
+		url('recoleta-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Recoleta';
+	src: url('recoleta-light.woff2') format('woff2'),
+		url('recoleta-light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Recoleta';
+	src: url('recoleta-black.woff2') format('woff2'),
+		url('recoleta-black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Recoleta';
+	src: url('recoleta-semibold.woff2') format('woff2'),
+		url('recoleta-semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Recoleta';
+	src: url('recoleta-medium.woff2') format('woff2'),
+		url('recoleta-medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Recoleta';
+	src: url('recoleta-regular.woff2') format('woff2'),
+		url('recoleta-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal; }
