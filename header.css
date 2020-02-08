@@ -37,12 +37,16 @@ body {
 
 .header {
 	position: fixed;
+	z-index: 1000;
 	top: 0;
-	width: calc(100% - 100px);
-	padding: 30px 50px;
+	width: calc(100% - 80px);
+	padding: 35px 40px;
 	font-family: "Domaine Sans", sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 300;
+	letter-spacing: -0.4px;
+	-webkit-transition: background 0.25s;
+	transition: background 0.25s;
 }
 
 .header #logo {
@@ -51,16 +55,97 @@ body {
 	margin-right: 20px;
 }
 
-.header #logo img {
-	width: 45px;
-	height: 45px;
+.header #logo, .header #logo img {
+	width: 40px;
+	height: 40px;
+}
+
+.header .menu-button {
+	display: none;
+	position: relative;
+	vertical-align: middle;
+	z-index: 1000;
+	width: 22px;
+	height: 40px;
+	margin: 0 5px 20px 20px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+.header .menu-button:hover {
+	top: -1px;
+}
+
+.header .menu-button:active {
+	top: 1px;
+}
+
+.header .menu-button::before,
+.header .menu-button::after,
+.header .menu-button span {
+	background: #000000;
+}
+
+.header .menu-button::before,
+.header .menu-button::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 0;
+	width: 100%;
+	height: 2px;
+	border-radius: 1px;
+	pointer-events: none;
+	-webkit-transition: -webkit-transform 0.25s;
+	transition: transform 0.25s;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.header .menu-button span {
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 2px;
+	border-radius: 1px;
+	text-indent: 200%;
+	-webkit-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+
+.header .menu-button::before {
+	-webkit-transform: translate3d(0, -6px, 0);
+	transform: translate3d(0, -6px, 0);
+}
+
+.header .menu-button::after {
+	-webkit-transform: translate3d(0, 6px, 0);
+	transform: translate3d(0, 6px, 0);
+}
+
+.header.active .menu-button span {
+	opacity: 0;
+}
+
+.header.active .menu-button::before {
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.header.active .menu-button::after {
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transform: rotate3d(0, 0, 1, -45deg);
 }
 
 .header .menu {
 	display: inline-block;
 	height: 25px;
 	background: #fff;
-	padding: 10px 35px;
+	padding: 9px 33px 6px 33px;
 	border-radius: 500px;
 	box-shadow: 0px 0px 0px 1px rgba(215,198,187,0.5);
 }
@@ -71,7 +156,7 @@ body {
 
 .header .menu li {
 	display: inline-block;
-	margin-right: 30px;
+	margin-right: 25px;
 }
 
 .header .menu li:last-child {
@@ -83,7 +168,7 @@ body {
 }
 
 .header .rsvp {
-	display: inline-block;
+	display: block;
 	float: right;
 }
 
@@ -91,8 +176,92 @@ body {
 	display: inline-block;
 	background: #000000;
 	color: #ffffff;
-	padding: 13px 35px;
+	padding: 11px 30px;
 	border-radius: 500px;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 500;
+}
+
+@media (max-width: 800px) {
+	.header::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0.97);
+		z-index: -1;
+		pointer-events: none;
+		opacity: 0;
+		-webkit-transition: opacity 0.25s;
+		transition: opacity 0.25s;
+	}
+
+	.header .menu-button {
+		display: inline-block;
+		float: right;
+	}
+
+	.header .menu,
+	.header .rsvp {
+		display: none;
+		opacity: 0;
+		background: transparent;
+		-webkit-transition: opacity 0.25s;
+		transition: opacity 0.25s;
+	}
+
+	.header.active {
+		position: absolute;
+		width: calc(100% - 80px);
+		min-height: calc(100% - 70px);
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.header.active::after {
+		opacity: 1;
+	}
+
+	.header.active .menu-button {
+		display: inline-block;
+		float: right;
+	}
+
+	.header.active .menu {
+		clear: both;
+		display: block;
+		height: auto;
+		padding: 0;
+		box-shadow: none;
+		opacity: 1;
+	}
+
+	.header.active .menu li {
+		display: inline;
+		line-height: 60px;
+		margin-right: 0;
+	}
+
+	.header.active .menu li::after {
+		content: '\A';
+		white-space: pre;
+	}
+
+	.header.active .rsvp {
+		display: block;
+		float: none;
+		margin-top: 40px;
+		opacity: 1;
+	}
+
+	.header.active .rsvp a {
+		display: inline-block;
+		background: #000000;
+		color: #ffffff;
+		padding: 12px 40px;
+		font-size: 25px;
+		font-weight: 400;
+	}
 }
