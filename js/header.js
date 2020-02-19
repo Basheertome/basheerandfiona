@@ -119,10 +119,14 @@ $(document).ready(function(){
 	});
 
 	document.addEventListener(tap, function(e) {
-	  window.human = true;
-	  render.play();
-	  updateCoords(e);
-	  animateParticules(pointerX, pointerY);
+	  // console.log(e.target.nodeName);
+	  // console.log(e.target.parentNode.nodeName);
+	  if (e.target.nodeName != "A" && e.target.parentNode.nodeName != "A") {
+	  	window.human = true;
+	  	render.play();
+	  	updateCoords(e);
+	  	animateParticules(pointerX, pointerY);
+	  }
 	}, false);
 
 	var centerX = window.innerWidth / 2;
