@@ -1,99 +1,128 @@
-.card1 {
-	position: relative;
-	display: table;
-	width: 100%;
-	height: 100vh;
-	height: -webkit-fill-available;
-	padding: 30px 40px;
-	text-align: center;
+#card1 {
 	color: #e5654f;
-	background: url("/images/petals.jpg") no-repeat center center;
-	background-size: cover;
-	box-sizing: border-box;
+	background-image: url("/images/petals.jpg");
 	opacity: 0;
 }
 
-.card1 .container {
-	display: table-cell;
-	vertical-align: middle;
+#card1 .container {
 	white-space: nowrap;
-	padding: 100px 0;
 }
 
-.card1 .container p {
+#card1 .container p {
 	font-family: "Domaine Sans", sans-serif;
 	font-size: 25px;
 	font-weight: 300;
 }
 
-.card1 .container #names span {
+#card1 .container #names span {
 	font-family: "Recoleta", sans-serif;
 	font-size: 80px;
 	font-weight: 300;
 	letter-spacing: 0px;
 }
 
-.card1 .container #names #plus {
+#card1 .container #names #plus {
 	display: none;
 }
 
-.card2 {
-	width: 100%;
-	padding: 150px 40px;
-	background: #FFFBF8;
-	text-align: center;
-	box-sizing: border-box;
+#card2 {
+	padding-top: 150px;
 }
 
-.card2 img {
-	width: 100%;
+#card2 .columns {
 	max-width: 600px;
+	margin: 30px auto 50px auto;
 }
 
-h1 {
-	display: block;
-	max-width: 750px;
-	margin: 20px auto;
-	font-family: "Recoleta", serif;
-	font-size: 60px;
-	font-weight: 300;
-	letter-spacing: 0px;
+#card2 h4 {
+	color: #6A5D4D;
+	margin: 0 auto;
 }
 
-h3 {
+#card2 h5 {
+	margin: -15px auto 30px auto;
+}
+
+#card2 h5 a {
+	color: #000000;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+#card2 p {
+	color: #887D70;
+	margin-top: 4px;
+}
+
+#card2 .button {
+	color: #464920;
+	background: #BEC46F;
+}
+
+#card3 {
+	position: relative;
+}
+
+#card3::before, #card3::after {
+	content: "";
 	display: block;
-	max-width: 750px;
-	margin: 20px auto;
-	font-family: "Domaine Sans", sans-serif;
-	font-size: 18px;
-	line-height: 30px;
-	font-weight: 300;
-	text-align: left;
+	width: 100%;
+	height: 80px;
+}
+
+#card3 img {
+	position: absolute;
+	top: calc(50% - 200px);
+	left: calc(50% - 200px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.1;
+}
+
+#card4 .button {
+	color: #8F7400;
+	background: #F2D660;
+}
+
+#card5 {
+	background-image: url("/images/beach.jpg");
+}
+
+#card5 h1 {
+	color: #656B60;
+}
+
+#card5 h5 {
+	color: #82867D;
+}
+
+#card5 .button {
+	color: #99513C;
+	background: #E5BE9E;
 }
 
 @media (max-width: 800px) {
-	.card1 .container {
+	#card1 .container {
 		padding: 0 0 100px 0;
 	}
 
-	.card1 .container p:first-child {
+	#card1 .container p:first-child {
 		margin-bottom: 15px;
 	}
 
-	.card1 .container p:last-child {
+	#card1 .container p:last-child {
 		margin-top: 10px;
 	}
 
-	.card1 .container #names span {
+	#card1 .container #names span {
 		display: block;
 		line-height: 80px;
 	}
 
-	.card1 .container #names #ampersand {
+	#card1 .container #names #ampersand {
 		display: none;
 	}
 
-	.card1 .container #names #plus {
+	#card1 .container #names #plus {
 		display: block;
 		font-family: "Domaine Sans", sans-serif;
 		font-size: 25px;
@@ -103,32 +132,25 @@ h3 {
 }
 
 @media (max-width: 600px) {
-	.card1 {
+	#card1 {
 		padding: 30px 0;
 	}
 
-	.card1 .container p {
+	#card1 .container p {
 		font-size: 19px;
 	}
 
-	.card1 .container #names span {
+	#card1 .container #names span {
 		font-size: 60px;
 		line-height: 60px;
 	}
 
-	.card1 .container #names #plus {
+	#card1 .container #names #plus {
 		font-size: 19px;
 		margin: 5px 0 15px 0;
 	}
 
-	h1 {
-		margin: 10px auto;
-		font-size: 50px;
-	}
-
-	h3 {
-		margin: 10px auto;
-		font-size: 16px;
-		line-height: 28px;
+	#card2 h5 {
+		margin: 10px auto 20px auto;
 	}
 }
