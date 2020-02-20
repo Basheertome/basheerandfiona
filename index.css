@@ -53,13 +53,9 @@
 	margin-top: 4px;
 }
 
-#card2 .button {
-	color: #464920;
-	background: #BEC46F;
-}
-
 #card3 {
 	position: relative;
+	overflow: hidden;
 }
 
 #card3::before, #card3::after {
@@ -78,9 +74,90 @@
 	opacity: 0.1;
 }
 
-#card4 .button {
+#card3 .button {
+	color: #464920;
+	background: #BEC46F;
+}
+
+#card4 {
+	overflow: hidden;
+}
+
+#card4 .photos {
+	display: inline-block;
+	position: relative;
+	margin: 100px auto;
+}
+
+#card4 .photos li {
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+#card4 .photos li:first-child {
+	position: relative;
+	z-index: 100;
+}
+
+#card4 .photos li:not(:last-child),
+#card4 li .button {
+	box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+}
+
+#card4.hover .photos li:not(:last-child),
+#card4.hover li .button {
+	box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+#card4.hover .photos li:nth-child(2) {
+	-webkit-transform: translate(150px, -100px)rotate(-30deg);
+	transform: translate(150px, -100px)rotate(-30deg); }
+#card4.hover .photos li:nth-child(3) {
+	-webkit-transform: translate(-130px, 100px)rotate(-27deg);
+	transform: translate(-130px, 100px)rotate(-27deg); }
+#card4.hover .photos li:nth-child(4) {
+	-webkit-transform: translate(140px, 75px)rotate(20deg);
+	transform: translate(140px, 75px)rotate(20deg); }
+#card4.hover .photos li:nth-child(5) {
+	-webkit-transform: translate(-100px, -100px)rotate(5deg);
+	transform: translate(-100px, -100px)rotate(5deg); }
+
+#card4 .photos li:hover {
+	z-index: 150;
+}
+
+#card4 .photos li:hover img {
+	transform: scale(1.03);
+}
+
+#card4 .photos li img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 100%;
+	-webkit-transition: -webkit-transform 0.1s;
+	transition: transform 0.1s;
+}
+
+#card4 .photos li:last-child {
+	display: block;
+	width: 100%;
+	height: auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 200;
+}
+
+#card4 li .button {
 	color: #8F7400;
 	background: #F2D660;
+	margin: 0 auto;
 }
 
 #card5 {
@@ -152,5 +229,17 @@
 
 	#card2 h5 {
 		margin: 10px auto 20px auto;
+	}
+
+	#card4 .photos {
+		margin: 0 auto;
+	}
+
+	#card4 .photos {
+		transform: scale(0.8);
+	}
+
+	#card4 li .button {
+		transform: scale(1.25);
 	}
 }

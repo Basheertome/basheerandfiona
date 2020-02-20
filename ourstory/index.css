@@ -1,0 +1,49 @@
+#card1 .columns {
+	justify-content: center;
+}
+
+#card1 .column {
+	flex: inherit;
+	text-align: center;
+}
+
+#card1 .column.gutter {
+	width: 100px;
+}
+
+#card1 .column div {
+	display: inline-block;
+	width: 240px;
+	height: 240px;
+	border-radius: 240px;
+	background-repeat: no-repeat;
+	background-position: center 10%;
+	background-size: cover;
+}
+
+#card1 .column #fiona {
+	background-image: url("/images/photothumb3.jpg"); }
+#card1 .column #basheer {
+	background-image: url("/images/photothumb2.jpg"); }
+
+#card1 h4 {
+	color: #6A5D4D;
+}
+
+@media (max-width: 800px) {
+	.columns {
+		display: block;
+	}
+
+	.column {
+		margin-bottom: 20px;
+	}
+
+	.column:last-child {
+		margin-bottom: 0;
+	}
+
+	#card1 .column.gutter {
+		display: none;
+	}
+}
