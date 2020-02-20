@@ -160,19 +160,29 @@
 	margin: 0 auto;
 }
 
-#card5 {
-	background-image: url("/images/beach.jpg");
-}
-
-#card5 h1 {
-	color: #656B60;
-}
-
-#card5 h5 {
-	color: #82867D;
+#card5 img {
+	max-width: 150px;
+	opacity: 0.1;
 }
 
 #card5 .button {
+	color: #925056;
+	background: #EFD9DB;
+}
+
+#card6 {
+	background-image: url("/images/beach.jpg");
+}
+
+#card6 h1 {
+	color: #656B60;
+}
+
+#card6 h5 {
+	color: #82867D;
+}
+
+#card6 .button {
 	color: #99513C;
 	background: #E5BE9E;
 }
@@ -241,5 +251,9 @@
 
 	#card4 li .button {
 		transform: scale(1.25);
+	}
+
+	#card5 img {
+		margin-bottom: 15px;
 	}
 }
