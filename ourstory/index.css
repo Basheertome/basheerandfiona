@@ -1,10 +1,21 @@
+#card1 {
+	background-image: url("/images/petals3.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 1000px;
+	background-color: #e9ebea;
+	color: #2f4051;
+}
+
 #card1 .columns {
 	justify-content: center;
+	margin-top: 100px;
 }
 
 #card1 .column {
 	flex: inherit;
 	text-align: center;
+	margin-bottom: 40px;
 }
 
 #card1 .column.gutter {
@@ -26,24 +37,57 @@
 #card1 .column #basheer {
 	background-image: url("/images/photothumb2.jpg"); }
 
-#card1 h4 {
-	color: #6A5D4D;
+#card1 .flowerdivider {
+	display: block;
+	width: calc(90% - 80px);
+	max-width: 600px;
+	margin: -30px auto 40px auto;
+}
+
+#card1 .flowerdivider img {
+	max-width: 300px;
+}
+
+#card1 .column h3 {
+	max-width: 300px;
+}
+
+#card1 > img {
+	border-radius: 10px;
+	margin: 40px auto;
+}
+
+#card1 > h3 {
+	max-width: 700px;
 }
 
 @media (max-width: 800px) {
-	.columns {
+	#card1 {
+		background-size: contain;
+	}
+
+	#card1 .columns {
 		display: block;
+		margin-top: 20px;
 	}
 
-	.column {
-		margin-bottom: 20px;
+	#card1 .column {
+		margin-bottom: 80px;
 	}
 
-	.column:last-child {
+	#card1 .column:last-child {
 		margin-bottom: 0;
 	}
 
 	#card1 .column.gutter {
 		display: none;
+	}
+
+	#card1 .flowerdivider {
+		margin: 40px auto;
+	}
+
+	#card1 .column h3 {
+		max-width: 700px;
 	}
 }
