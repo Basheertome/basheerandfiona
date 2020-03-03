@@ -71,7 +71,7 @@
 	left: calc(50% - 200px);
 	width: 400px;
 	height: 400px;
-	opacity: 0.1;
+	opacity: 0.15;
 }
 
 #card3 .button {
@@ -171,20 +171,20 @@
 }
 
 #card6 {
-	background-image: url("/images/beach.jpg");
+	background-image: url("/images/bernalsunflare.jpg");
 }
 
 #card6 h1 {
-	color: #656B60;
+	color: #000000;
 }
 
 #card6 h5 {
-	color: #82867D;
+	color: #666;
 }
 
 #card6 .button {
-	color: #99513C;
-	background: #E5BE9E;
+	color: #ffffff;
+	background: #435b73;
 }
 
 @media (max-width: 800px) {
