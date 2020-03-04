@@ -220,8 +220,8 @@ body {
 .card.centered {
 	position: relative;
 	display: table;
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
+	height: 100vh;
+	height: -webkit-fill-available;
 	padding: 30px 40px;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -316,6 +316,13 @@ h5 {
 }
 
 @media (max-width: 800px) {
+	.header {
+		pointer-events: none; }
+	.header #logo,
+	.header .menu-button {
+		pointer-events: auto;
+	}
+
 	.header .menu-button {
 		display: inline-block;
 		float: right;
@@ -334,6 +341,7 @@ h5 {
 		min-height: calc(100% - 30px);
 		font-size: 30px;
 		text-align: center;
+		pointer-events: auto;
 	}
 
 	.header.active::after {
