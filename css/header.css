@@ -276,6 +276,10 @@ h3 {
 	text-align: left;
 }
 
+h3 + h3 {
+	margin-top: 25px;
+}
+
 h4 {
 	font-family: "Recoleta", serif;
 	font-size: 30px;
