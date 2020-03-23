@@ -46,6 +46,7 @@
 #card2 h5 a {
 	color: #000000;
 	border-bottom: 1px solid rgba(0,0,0,0.15);
+	line-height: 38px;
 }
 
 #card2 p {
