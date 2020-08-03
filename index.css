@@ -21,6 +21,11 @@
 	letter-spacing: 0px;
 }
 
+#card1 .container #names span a {
+	position: static;
+	color: #e5654f;
+}
+
 #card1 .container #names #plus {
 	display: none;
 }
