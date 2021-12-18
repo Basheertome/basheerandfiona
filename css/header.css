@@ -221,6 +221,7 @@ body {
 	position: relative;
 	display: table;
 	height: 100vh;
+	min-height: 100vh;
 	height: -webkit-fill-available;
 	padding: 30px 40px;
 	background-repeat: no-repeat;
