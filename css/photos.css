@@ -8,19 +8,9 @@
 }
 
 #card1 .gallery img {
+	max-width: 100%;
 	border-radius: 10px;
 	box-shadow: 0 15px 30px rgba(0,0,0,.1);
-}
-
-#card1 .gallery [data-orientation="portrait"] img {
-	max-width: 280px;
-	height: auto;
-}
-
-#card1 .gallery [data-orientation="landscape"] img {
-	max-height: 280px;
-	width: auto;
-	max-width: 100%;
 }
 
 @media (min-width: 800px) {
