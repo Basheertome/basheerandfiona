@@ -25,7 +25,7 @@ lightbox.on('uiRegister', function() {
 			el.setAttribute('rel', 'noopener');
 
 			pswp.on('change', () => {
-				el.href = pswp.currSlide.data.src;
+				el.href = pswp.currSlide.data.element.href;
 				el.download = pswp.currSlide.data.element.download;
 			});
 		}
